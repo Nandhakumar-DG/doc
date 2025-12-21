@@ -11,32 +11,33 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Repositories (Repos)',
+    Svg: require('@site/static/img/Repositories (Repos).svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        A repository is the main container for a project on GitHub.
+        It stores source code, files, folders, and the complete history of changes.
+        Repositories allow developers to track versions, collaborate with others, and manage a project in one place.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Branches & Commits',
+    Svg: require('@site/static/img/Branches & Commits.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Branches allow developers to work on new features or fixes without affecting the main codebase.
+        They make it possible to develop, test, and experiment safely in parallel.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Collaboration (Pull Requests)',
+    Svg: require('@site/static/img/Collaboration (Pull Requests).svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Pull Requests (PRs) are used to propose and review changes before merging them into the main branch.
+        They allow team members to discuss code, request improvements, and approve changes.
       </>
     ),
   },
