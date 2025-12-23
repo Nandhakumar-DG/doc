@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Designed by a beginner',
   tagline: 'Learn how GitHub works',
-  favicon: 'img/github_logo.ico',
+  favicon: 'img/file_logo.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
