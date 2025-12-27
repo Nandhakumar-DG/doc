@@ -6,19 +6,26 @@ ways to create a new branch in Git!
 <!-- This is how comment line Works -->
 First, go to the project’s root folder.
 ## Create a branch (without switching)
+In Git, you can create a new branch without moving from your current branch.
+This is useful when you want to prepare a branch but continue working on the current one.
 
+As you can see, we are in the home directory. We need to move to the directory where the project exists.
 
+![git_branch_creation_0](/img/git_branch_creation_0.png)
 
+In my case, I moved to the directory where my project exists and used the following command to view all the branches used in the project.
 
+```jsx title="bash"
+git branch
+```
 
+![git_branch_creation_1](/img/git_branch_creation_1.png)
 
+You can also see the highlighted branch, which is the one I am currently on. This is the **develop** branch, and it contains the latest updates of the project. If you are not on the appropriate branch, switch to the branch where all the updates are available. If you want to move to another branch use the following command.
 
-
-
-
-
-
-
+```jsx title="bash"
+git checkout <branch-name>
+```
 
 
 
