@@ -1,12 +1,12 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
   title: 'Designed by a beginner',
-  tagline: 'Learn how GitHub works',
+  tagline: 'Documenting Scripts',
   favicon: 'img/file_logo.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -73,32 +73,27 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Home',
+      title: '',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/github.svg',
+        alt: 'Document Logo',
+        src: 'img/file_logo.ico',
       },
+
       items: [
+        { to: '/', label: 'Home', position: 'left', activeBaseRegex: '^/$' },
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Learn',
         },
-        // {
-        //   type: 'docSidebar',
-        //   sidebarId: 'tutorialSidebar',
-        //   position: 'left',
-        //   label: 'Deploy',
-        // },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        // {
-        //   href: 'https://github.com/facebook/docusaurus',
-        //   label: 'GitHub',
-        //   position: 'right',
-        // },
+        { to: '/scripts', label: 'Scripts', position: 'left' },
       ],
     },
+
+
+
+
     footer: {
       style: 'dark',
       links: [
@@ -118,14 +113,6 @@ const config: Config = {
               label: 'Stack Overflow',
               href: 'https://stackoverflow.com/questions/tagged/github?tab=Newest',
             },
-            // {
-            //   label: 'Discord',
-            //   href: 'https://discordapp.com/invite/docusaurus',
-            // },
-            // {
-            //   label: 'X',
-            //   href: 'https://x.com/docusaurus',
-            // },
           ],
         },
         {
