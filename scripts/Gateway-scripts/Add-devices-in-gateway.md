@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 ---
-# Creating a New Branch in Github
+# Add Devices in the gateway
 ways to create a new branch in Git!
 <!-- This is how comment line Works -->
 First, go to the project’s root folder.

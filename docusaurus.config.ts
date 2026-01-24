@@ -94,17 +94,17 @@ const config: Config = {
       items: [
         { to: '/', label: 'Home', position: 'left', activeBaseRegex: '^/$' },
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Learn',
-        },
-        {
           type: 'doc',
           docId: 'intro',
           position: 'left',
           label: 'Scripts',
           docsPluginId: 'scripts',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'tutorialSidebar',
+          position: 'left',
+          label: 'Learn',
         },
       ],
     },
