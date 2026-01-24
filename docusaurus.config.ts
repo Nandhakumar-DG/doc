@@ -69,6 +69,18 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'scripts',
+        path: 'scripts',
+        routeBasePath: 'scripts',
+        sidebarPath: './sidebarsScripts.ts',
+      },
+    ],
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
@@ -87,7 +99,13 @@ const config: Config = {
           position: 'left',
           label: 'Learn',
         },
-        { to: '/scripts', label: 'Scripts', position: 'left' },
+        {
+          type: 'doc',
+          docId: 'intro',
+          position: 'left',
+          label: 'Scripts',
+          docsPluginId: 'scripts',
+        },
       ],
     },
 
