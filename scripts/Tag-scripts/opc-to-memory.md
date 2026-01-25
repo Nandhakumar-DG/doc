@@ -55,7 +55,7 @@ for tag in tags:
 	   	path		=		fullpath.replace("/"+name,"")
 	   	
 	   	# Check for the datatype and Insert values accordign to that
-	   	if (datatype == 'Boolean' or datatype == 'Int4' or datatype == 'Float4'or datatype == 'Float8':   		  
+	   	if (datatype == 'Boolean' or datatype == 'Int4' or datatype == 'Float4'or datatype == 'Float8'):   		  
 		   	system.tag.configure(path,overrides,"m")		
 			if datatype == 'Boolean':
 		  		value = bool(random.getrandbits(1))
@@ -67,3 +67,34 @@ for tag in tags:
 # Writing the values to the respective tags
 system.tag.writeAsync(paths, override_values)
 ```
+
+## Usage
+
+To use this script, set the path parameter and run it in the Script Console:
+
+```python
+# Example usage
+path = "[default]Area/Motors/Motor1"  # Path to the parent folder
+
+# Run the script - it will:
+# 1. Browse all tags in the specified path
+# 2. Identify OPC tags
+# 3. Convert supported data types (Boolean, Int4, Float4, Float8) to Memory tags
+# 4. Assign random values to the converted tags
+```
+
+## Returns
+
+The script performs the following actions:
+
+- **Converts OPC tags to Memory tags**: Changes the value source from OPC to Memory for supported data types
+- **Assigns initial values**: Sets random values based on the data type:
+  - Boolean tags: Random true/false value
+  - Int4/Float4/Float8 tags: Random integer between 2 and 100
+- **Writes values asynchronously**: Uses `system.tag.writeAsync()` to write initial values to all converted tags
+- **Ignores unsupported types**: String and other data types are not converted
+
+**Note**: If no tags are converted, verify that:
+- The tag path is correct and contains OPC tags
+- The tags have the OPCItemPath attribute set
+- The tag data types are Boolean, Int4, Float4, or Float8
