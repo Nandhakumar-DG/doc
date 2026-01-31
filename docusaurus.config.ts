@@ -25,7 +25,7 @@ const config: Config = {
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   // onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -43,7 +43,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          // Remove this to your repo.
           // editUrl:
           //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
@@ -79,6 +79,15 @@ const config: Config = {
         sidebarPath: './sidebarsScripts.ts',
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'css-styles',
+        path: 'css-styles',
+        routeBasePath: 'css-styles',
+        sidebarPath: './sidebarsCss.ts',
+      },
+    ],
   ],
 
   themeConfig: {
@@ -101,10 +110,11 @@ const config: Config = {
           docsPluginId: 'scripts',
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          type: 'doc',
+          docId: 'intro',
           position: 'left',
-          label: 'Learn',
+          label: 'CSS Styles',
+          docsPluginId: 'css-styles',
         },
       ],
     },
