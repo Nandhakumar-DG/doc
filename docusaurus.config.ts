@@ -101,7 +101,7 @@ const config: Config = {
       },
 
       items: [
-        { to: '/', label: 'Home', position: 'left', activeBaseRegex: '^/$' },
+        { to: '/', label: 'Home', position: 'left', activeBaseRegex: '^/$|^/doc/$' },
         {
           type: 'doc',
           docId: 'intro',
