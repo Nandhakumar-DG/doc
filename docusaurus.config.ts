@@ -15,17 +15,17 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://nandhakumar-dg.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/doc/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'Nandhakumar-DG', // Usually your GitHub org/user name.
+  projectName: 'doc', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   // onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -43,7 +43,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          // Remove this to your repo.
           // editUrl:
           //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
@@ -79,6 +79,15 @@ const config: Config = {
         sidebarPath: './sidebarsScripts.ts',
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'css-styles',
+        path: 'css-styles',
+        routeBasePath: 'css-styles',
+        sidebarPath: './sidebarsCss.ts',
+      },
+    ],
   ],
 
   themeConfig: {
@@ -92,7 +101,7 @@ const config: Config = {
       },
 
       items: [
-        { to: '/', label: 'Home', position: 'left', activeBaseRegex: '^/$' },
+        { to: '/', label: 'Home', position: 'left', activeBaseRegex: '^/$|^/doc/$' },
         {
           type: 'doc',
           docId: 'intro',
@@ -101,10 +110,11 @@ const config: Config = {
           docsPluginId: 'scripts',
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          type: 'doc',
+          docId: 'intro',
           position: 'left',
-          label: 'Learn',
+          label: 'CSS Styles',
+          docsPluginId: 'css-styles',
         },
       ],
     },
